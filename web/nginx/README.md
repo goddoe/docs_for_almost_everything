@@ -55,6 +55,7 @@ server {
 	#listen 80 default_server;
 	#listen [::]:80 default_server;
     listen 80;
+    client_max_body_size 30M;
 
 	# SSL configuration
 	#
@@ -118,6 +119,7 @@ server {
 
     listen 443 ssl http2 default_server;
     listen [::]:443 ssl http2 default_server;
+    client_max_body_size 30M;
 
 	server_name 127.0.0.1;
     ssl on;
